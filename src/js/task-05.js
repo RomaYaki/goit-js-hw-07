@@ -15,7 +15,11 @@ const nameCreate = document.querySelector('#name-output')
 inputArea.addEventListener('input', createInputName);
 
 function createInputName(event) {
-    console.log(event.currentTarget.value)
-    nameCreate.textContent = event.currentTarget.value;
+    const value = event.currentTarget.value;
+    if (value) {
+        nameCreate.textContent = value;
+    } else {
+        nameCreate.textContent = 'незнакомец'  
+    }
 };
 
